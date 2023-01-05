@@ -4,7 +4,7 @@ body {
 .header {
   width: 100vw;
   height: 56px;
-  background-color: rgb(124, 246, 255);
+  background-color: rgb(248, 248, 248);
   display: grid;
   justify-content: center;
   grid-template-columns: minmax(auto, 1200px);
@@ -38,4 +38,120 @@ body {
   text-decoration: none;
   color: black;
   font-size: 18px;
+}
+
+main {
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 1200px);
+}
+
+.products-header {
+  padding: 8px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products {
+  width: 320px;
+  padding: 0 16px;
+}
+
+.product {
+  width: fit-content;
+  /* background-color: red; */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.product__image {
+  width: 160px;
+}
+
+.product__title {
+  /* text-align: center; */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding: 2px 0;
+  margin: 4px 0;
+}
+
+.product__description {
+  /* text-align: center; */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  padding: 2px 0;
+}
+
+.product-stars {
+  margin: 8px 0;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.product-details {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.product__price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product__buy {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  /* opacity: none; */
+  background-color: black;
+}
+
+.product-add {
+  display: flex;
+  gap: 8px;
+  height: 32px;
+}
+
+.product__plus {
+  background: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.product__minus {
+  background: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.product__amount {
+  text-align: center;
+  width: 3rem;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+  padding: 0 4px;
 }

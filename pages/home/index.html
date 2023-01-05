@@ -27,6 +27,62 @@
         <div class="header-cart"><i class="fa-solid fa-cart-shopping"></i></div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <div class="products-header">
+        visar 7 av 20 resltat
+        <div class="products-header-filters">
+          Kategori:
+          <select class="product-header-order">
+            <option value="omdömme">Electronics</option>
+            <option value="omdömme">Jewelery</option>
+            <option value="omdömme">Clothing (male)</option>
+            <option value="omdömme">Clothing (female)</option>
+          </select>
+          Sortera på:
+          <select class="product-header-order">
+            <option value="omdömme">Pris</option>
+            <option value="omdömme">Omdömme</option>
+          </select>
+        </div>
+      </div>
+      <div class="products">
+        <div class="product">
+          <div class="product-img-container">
+            <img
+              src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+              alt="product"
+              class="product__image"
+            />
+          </div>
+          <h4 class="product__title">T-Shirt</h4>
+          <p class="product__description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
+            doloremque?
+          </p>
+          <div class="product-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="product-details">
+            <div class="product__price">$15</div>
+            <!-- <div class="product-add">
+              <button class="product__buy">Lägg i kundvagn</button>
+            </div> -->
+            <div class="product-add">
+              <button class="product__plus">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <input type="text" class="product__amount" />
+              <button class="product__minus">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
