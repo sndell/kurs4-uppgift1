@@ -1,4 +1,11 @@
+:root {
+  --product-amount: 5;
+}
+
 body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .header {
@@ -42,6 +49,8 @@ body {
 
 main {
   width: 100vw;
+  height: calc(100vh - 56px);
+  overflow-y: scroll;
   display: grid;
   justify-content: center;
   grid-template-columns: minmax(auto, 1200px);
@@ -55,31 +64,40 @@ main {
 }
 
 .products {
-  width: 320px;
-  padding: 0 16px;
+  padding: 0 16px 8px 16px;
+  display: grid;
+  grid-template-columns: repeat(
+    var(--product-amount),
+    calc((100% - 32px) / var(--product-amount))
+  );
+  gap: 8px;
 }
 
 .product {
-  width: fit-content;
-  /* background-color: red; */
   padding: 8px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(248, 248, 248);
+  border-radius: 8px;
 }
 
 .product-img-container {
   width: 100%;
+  height: 160px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .product__image {
-  width: 160px;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 .product__title {
   /* text-align: center; */
   display: -webkit-box;
+  height: 36px;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -103,6 +121,7 @@ main {
 }
 
 .product-details {
+  justify-self: end;
   display: flex;
   align-items: end;
   justify-content: space-between;
