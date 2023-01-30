@@ -8,69 +8,60 @@ body {
   overflow: hidden;
 }
 
-.header {
-  width: 100vw;
-  height: 56px;
-  background-color: rgb(248, 248, 248);
-  display: grid;
-  justify-content: center;
-  grid-template-columns: minmax(auto, 1200px);
-}
-
-.header-container {
-  display: grid;
-  grid-template-columns: max-content auto max-content;
-  align-items: center;
-  gap: 32px;
-  padding: 0 16px;
-}
-
-.header-branding {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header-branding__title {
-  display: flex;
-  font-size: 24px;
-  font-weight: 900;
-}
-
-.header-branding__logo {
-  font-size: 24px;
-}
-
-.header__link {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
 main {
   width: 100vw;
   height: calc(100vh - 56px);
-  overflow-y: scroll;
+  overflow-y: overlay;
   display: grid;
   justify-content: center;
   grid-template-columns: minmax(auto, 1200px);
+  grid-template-rows: max-content auto;
 }
 
 .products-header {
-  padding: 8px 16px;
-  width: 100%;
+  height: fit-content;
+  padding: 8px 0;
   display: flex;
   justify-content: space-between;
 }
 
 .products {
-  padding: 0 16px 8px 16px;
+  padding: 0 0 8px 0;
   display: grid;
+  height: calc(100% - 16px);
+  align-items: start;
   grid-template-columns: repeat(
     var(--product-amount),
     calc((100% - 32px) / var(--product-amount))
   );
+  grid-auto-rows: max-content;
   gap: 8px;
+}
+
+@media only screen and (max-width: 1250px) {
+  :root {
+    --product-amount: 4;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  :root {
+    --product-amount: 3;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  :root {
+    --product-amount: 2;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .products {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
 }
 
 .product {

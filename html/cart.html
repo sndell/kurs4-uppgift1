@@ -4,7 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <script src="../js/util.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/cart-page.js" defer></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-branding">
+          <i class="fa-solid fa-bag-shopping header-branding__logo"></i>
+          <div class="header-branding__title">Bra butik</div>
+        </div>
+        <a href="products.html" class="header__link header__link">Products</a>
+        <a href="cart.html" class="header-cart">
+          <span class="header-cart__amount hidden">4</span
+          ><i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="main-header">
+        <div class="main-header__total">total: $50</div>
+        <button class="main-header__clear" onclick="handleClear()">
+          clear
+        </button>
+      </div>
+      <div class="products"></div>
+    </main>
+  </body>
 </html>
